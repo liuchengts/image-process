@@ -43,8 +43,13 @@ public class ImageOcrUtils {
         String text = "";
         try {
             tesseract.setLanguage(language);
-//            tesseract.setLanguage("eng");
-//            tesseract.setHocr(true);
+            // http://www.sk-spell.sk.cx/tesseract-ocr-parameters-in-302-version
+            // 将结果转为html输出
+//          tesseract.setVariable("tessedit_create_hocr","1");
+            // 要识别的字符白名单，不包含的字符不会识别-在中文下无效
+//          tesseract.setVariable("tessedit_char_whitelist","0123456789-.");
+            // 不识别字符黑名单
+//          tesseract.setVariable("tessedit_char_blacklist","计算机系统");
             text = tesseract.doOCR(bufferedImage);
         } catch (TesseractException e) {
             e.printStackTrace();
