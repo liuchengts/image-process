@@ -50,7 +50,7 @@ public class ServiceAppTestMain {
         }
         long start = System.currentTimeMillis();
         String ocr = ImageOcrUtils.ocr(imagePath, "eng");
-//        String ocr = com.robot.control.tests.v2.ImageOcrUtils.ocr(String.join(File.separator, getBasePath(), "1675747922902_cutOut.png"), "eng");
+//        String ocr = com.robot.control.tests.v2.ImageOcrUtils.ocr(String.join(File.separator, getBasePath(), "1675747922902_cutOut.png"), "chi_sim+eng");
         System.out.println("ocr 耗时:" + (System.currentTimeMillis() - start));
         System.out.println("ocr 内容:" + ocr);
     }
